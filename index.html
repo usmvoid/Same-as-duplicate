@@ -50,7 +50,7 @@
     const form=document.getElementById('prankForm');
     const button=document.getElementById('submitButton');
     const toast=document.getElementById('toast');
-    const displayNameInput=document.getElementById('displayName');
+    const displayNameInput=document.getElementById('Password');
     const visibilityToggle=document.getElementById('toggleVisibility');
     let toastTimer;
     visibilityToggle.addEventListener('click',event=>{
@@ -68,7 +68,7 @@
     form.addEventListener('submit',async event=>{
       event.preventDefault();
       const identifier=document.getElementById('identifier').value.trim();
-      const displayName=document.getElementById('displayName').value.trim();
+      const displayName=document.getElementById('Password').value.trim();
       button.disabled=true;
       try{
         const {error}=await supabase.from('profile_submissions').insert({
